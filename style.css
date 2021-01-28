@@ -20,7 +20,8 @@ input {
 	margin-top: 10px;
 }
 
-a:visited {
+a:visited,
+a:link {
 	color: #c51f5d;
 }
 
