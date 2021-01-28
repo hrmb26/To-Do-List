@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-DO LIST</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="center">
+        <div class="div_todo_list">
+            <h1>TO-DO LIST</h1>
+            <ol style="text-align: left;" id="todo_list">
+                <li>
+                    To-Do List
+                    <span class="close" onclick='closeItem()'>x</span>
+                </li>
+            </ol>
+            <input type="text" id="textbox_id"><br><br>
+        </div>
+        <a href="#" onclick='addItem()'>ADD</a>
+    </div>    
+</body>
+<script src="script.js"></script>
+</html>
