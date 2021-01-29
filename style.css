@@ -21,6 +21,16 @@ input {
 	margin-top: 10px;
 }
 
+li {
+	display: flex;
+	justify-content: space-between;
+	word-break: break-all;
+}
+
+li:hover {
+	cursor: pointer;
+}
+
 a:visited,
 a:link {
 	color: #c51f5d;
@@ -31,7 +41,19 @@ a:hover {
 }
 
 span {
-	float: right;
+	background-color: #c51f5d;
+	color: #243447;
+	padding: 5px 5px;
+}
+
+img {
+	width: 15%;
+	float: left;
+	margin-top: 50px;
+}
+
+span:hover {
+	cursor: pointer;
 }
 
 .center {
