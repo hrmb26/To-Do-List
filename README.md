@@ -11,7 +11,7 @@
 **0.3**
 * Internal scroll on list
 * rearranged code
-* CLEAR All button added
+* Renamed ADD button to CLEAR
 * Removed ADD button as it was unnecesary
 
 **0.2**
