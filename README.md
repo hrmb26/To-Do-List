@@ -1,12 +1,18 @@
 # To-Do-List
 
-## TO-DO List (hehe)
+### TO-DO List (hehe)
 
 * Local storage
 * Export to xls, csv or txt
-* Delete all button
+* ~~Delete all button~~
 
-## Version History
+### Version History
+
+**0.3**
+* Internal scroll on list
+* rearranged code
+* CLEAR All button added
+* Removed ADD button as it was unnecesary
 
 **0.2**
 * Line-through to elements in the list
@@ -16,4 +22,4 @@
 
 **0.1**
 
--Initial Release
+* Initial Release

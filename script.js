@@ -2,22 +2,36 @@ let i = 0;
 let listElements = document.getElementsByTagName('LI');
 let close = document.getElementsByClassName('close');
 
-// hace todas las clases 'close' cerrar el elemento padre
-for (i = 0; i < listElements.length; i++) {
-	close[i].onclick = function() {
-		let div = this.parentElement;
-		div.remove();
-	};
+//permite eliminar todos los elementos de la lista con un solo boton
+function clearAll() {
+	while (listElements.length > 0) {
+		for (i = 0; i < listElements.length; i++) {
+			listElements[i].remove();
+		}
+	}
 }
 
-for (i = 0; i < listElements.length; i++) {
-	listElements[i].onclick = function() {
-		if (this.style.textDecoration == 'line-through') {
-			this.style.textDecoration = 'none';
-		} else {
-			this.style.textDecoration = 'line-through';
-		}
-	};
+// hace todas las clases 'close' cerrar el elemento padre
+function closeItem() {
+	for (i = 0; i < listElements.length; i++) {
+		close[i].onclick = function() {
+			let div = this.parentElement;
+			div.remove();
+		};
+	}
+}
+
+//permite tachar los elementos de la lista
+function lineThru() {
+	for (i = 0; i < listElements.length; i++) {
+		listElements[i].onclick = function() {
+			if (this.style.textDecoration == 'line-through') {
+				this.style.textDecoration = 'none';
+			} else {
+				this.style.textDecoration = 'line-through';
+			}
+		};
+	}
 }
 
 function addItem() {
@@ -37,27 +51,17 @@ function addItem() {
 		document.getElementById('textbox_id').value = '';
 	}
 
-	for (i = 0; i < listElements.length; i++) {
-		listElements[i].onclick = function() {
-			if (this.style.textDecoration == 'line-through') {
-				this.style.textDecoration = 'none';
-			} else {
-				this.style.textDecoration = 'line-through';
-			}
-		};
-	}
+	lineThru();
 
-	for (i = 0; i < listElements.length; i++) {
-		close[i].onclick = function() {
-			let div = this.parentElement;
-			div.remove();
-		};
-	}
+	closeItem();
 }
 
 document.getElementById('textbox_id').addEventListener('keyup', function(event) {
 	event.preventDefault();
 	if (event.keyCode === 13) {
-		document.getElementById('addButton').click();
+		addItem();
 	}
 });
+
+closeItem();
+lineThru();

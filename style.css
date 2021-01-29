@@ -67,3 +67,13 @@ span:hover {
 	background-color: #243447;
 	text-align: center;
 }
+
+.div_todo_list {
+	height: 300px;
+	overflow-x: auto;
+	padding: 40px;
+}
+.todo_list {
+	height: 200px;
+	width: 600px;
+}
